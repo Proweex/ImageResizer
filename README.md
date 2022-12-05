@@ -1,6 +1,4 @@
 # ImageResizer
-pyhton code to resize any image
+pyhton code to resize any image on computer
 
-use in terminal
-
-havent tested on windows
+only been tested on linux mint
