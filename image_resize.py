@@ -61,15 +61,15 @@ def resize(src, save_to, ratio_wh, ht):
     wt = target_width_resolver(ratio_wh, target_height)         # wt : width target
     ht = int(ht)                                                # ht : height target
 
-    # check if save_to is empty and src is not full path, if so get current working directory
+        # check if save_to is empty and src is not full path, if so get current working directory
     if 'src_path' in locals() :
-        print("image saved to " + src_path)
+        print("image saved to " + src_path + "/resized_" + name_ext[0] + "." +name_ext[1])
     else:
         if not save_to :
             save_to = getcwd()        
-            print("image saved to " + "/resized_" + save_to + name_ext[0]+ "." +name_ext[1])
+            print("image saved to " + save_to + "/resized_" + name_ext[0] + "." +name_ext[1])
         else :
-            print("image saved to " + "/resized_" + save_to + name_ext[0]+ "." +name_ext[1])
+            print("image saved to " + save_to + "/resized_" + name_ext[0] + "." +name_ext[1])
 
     img = Image.open(src)
     new_img = img.resize([wt,ht])
